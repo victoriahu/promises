@@ -52,11 +52,12 @@ var readFileAndMakeItFunny = function(filePath, callback) {
    
     var funnyFile = file.split('\n')
       .map(function(line) {
+        // console.log("map is working");
         return line + ' lol';
       })
       .join('\n');
 
-    callback(funnyFile);
+    callback(null, funnyFile);
   });
 };
 
